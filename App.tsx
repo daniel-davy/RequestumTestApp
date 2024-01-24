@@ -1,22 +1,18 @@
 import React from 'react';
-import styled from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
+import theme from './src/styles/theme';
+import { SafeAreaView } from 'react-native';
+import 'react-native-gesture-handler';
+import StackNavigation from './src/navigation/stackNavigation';
 
 const App = () => {
     return (
-        <StyledView>
-            <StyledText>123</StyledText>
-        </StyledView>
+        <ThemeProvider theme={theme}>
+            <SafeAreaView style={{flex: 1}}>
+                <StackNavigation />
+            </SafeAreaView>
+        </ThemeProvider>
     );
 };
-
-const StyledView = styled.View`
-    flex: 1;
-`;
-
-const StyledText = styled.Text`
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000
-`;
 
 export default App;
