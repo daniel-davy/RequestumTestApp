@@ -2,17 +2,40 @@ import React from 'react';
 import styled from 'styled-components/native';
 import PrimaryButton from '../components/primaryButton';
 import SecondaryButton from '../components/secondaryButton';
+import Background from '../components/background';
+import { useNavigation } from '@react-navigation/native';
+import { AppStackScreenProp } from '../navigation/stackNavigation';
+import Logo from '../../assets/Logo.svg';
 
 const Splash = () => {
+    const navigation = useNavigation<AppStackScreenProp>();
+
     return (
-        <Container>
-            <ButtonsContainer>
-                <PrimaryButton text='Login' onPress={() => console.log(1)} />
-                <SecondaryButton text='Register' onPress={() => console.log(2)} />
-            </ButtonsContainer>
-        </Container>
+        <Background>
+            <LogoContainer>
+                <Logo />
+            </LogoContainer>
+            <Container>
+                <ButtonsContainer>
+                    <PrimaryButton
+                        text="Login"
+                        onPress={() => navigation.navigate('Login')}
+                    />
+                    <SecondaryButton
+                        text="Register"
+                        onPress={() => navigation.navigate('SignUp')}
+                    />
+                </ButtonsContainer>
+            </Container>
+        </Background>
     );
 };
+
+const LogoContainer = styled.View`
+    position: absolute;
+    top: 215px;
+    align-self: center;
+`;
 
 const Container = styled.View`
     flex: 1;

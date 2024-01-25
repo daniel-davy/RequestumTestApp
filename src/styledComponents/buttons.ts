@@ -18,6 +18,7 @@ const SecondaryButtonContainer = styled.TouchableOpacity`
 
 const ButtonText = styled.Text`
   color: #fff;
+  font-family: ${(props) => props.theme.fontFamily.button};
   font-size: ${(props) => props.theme.fontSize.button};
   font-weight: ${(props) => props.theme.fontWeight.button};
 `;

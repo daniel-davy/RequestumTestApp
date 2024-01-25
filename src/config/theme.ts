@@ -2,7 +2,7 @@ const theme = {
     colors: {
         primary: '#EB0057',
         iconSecondary: '#818181',
-        buttonSecondary: '#262727'
+        buttonSecondary: '#262727',
     },
     fontSize: {
         header: '18px',
@@ -18,6 +18,13 @@ const theme = {
         field: '400',
         button: '700',
     },
+    fontFamily: {
+        header: 'Montserrat-SemiBold',
+        subtitle: 'Montserrat-Medium',
+        body: 'Montserrat-Regular',
+        field: 'Montserrat-Regular',
+        button: 'Montserrat-Bold'
+    }
 };
 
 export default theme;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonText, PrimaryButtonContainer } from '../styles/button';
+import { ButtonText, PrimaryButtonContainer } from '../styledComponents/buttons';
 import CustomShadow from './customShadow';
 
 const PrimaryButton = ({

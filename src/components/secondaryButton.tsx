@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonText, SecondaryButtonContainer } from '../styles/button';
+import { ButtonText, SecondaryButtonContainer } from '../styledComponents/buttons';
 
 const SecondaryButton = ({ text, onPress }: ISecondaryButtonProps) => {
     return (

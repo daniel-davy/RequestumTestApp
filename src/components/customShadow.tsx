@@ -1,11 +1,12 @@
 import React from 'react';
 import DropShadow from 'react-native-drop-shadow';
+import theme from '../config/theme';
 
 const CustomShadow = ({ children }: ICustomShadowProps) => {
     return (
         <DropShadow
             style={{
-                shadowColor: '#EB005780',
+                shadowColor: theme.colors.primary,
                 shadowOffset: {
                     width: 0,
                     height: 0,
